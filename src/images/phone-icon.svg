@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>PhoneIcon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-1265.000000, -83.000000)" fill="#4B4B4B" fill-rule="nonzero">
+            <g id="Header">
+                <g id="Contact" transform="translate(1265.000000, 39.000000)">
+                    <g id="LinkWithIcon-phone" transform="translate(0.000000, 44.000000)">
+                        <g id="LinkIcon">
+                            <path d="M17.6,14.4 C16,16 16,17.6 14.4,17.6 C12.8,17.6 11.2,16 9.6,14.4 C8,12.8 6.4,11.2 6.4,9.6 C6.4,8 8,8 9.6,6.4 C11.2,4.8 6.4,0 4.8,0 C3.2,0 0,4.8 0,4.8 C0,8 3.2875,14.4875 6.4,17.6 C9.5125,20.7125 16,24 19.2,24 C19.2,24 24,20.8 24,19.2 C24,17.6 19.2,12.8 17.6,14.4 Z" id="PhoneIcon"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
