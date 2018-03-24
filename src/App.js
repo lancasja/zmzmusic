@@ -95,6 +95,19 @@ const studios = [
   }
 ];
 
+const Albums = ({ albums }) => (
+  <ul className="album-art">{
+    albums.map((album, index) => {
+      return (
+        <li className="album-art--album">
+          <img src={ album } alt=""/>
+        </li>
+      );
+    })
+  }</ul>
+);
+
+
 class App extends Component {
   render() {
     return (
@@ -117,17 +130,15 @@ class App extends Component {
           ]}/>
 
         <section id="albums">
-          <div className="section-header" style={{ borderBottom: '2px solid #222', color: '#222' }}>
+          <div className="section-header">
             <h3>Album Credits</h3>
           </div>
-          <CoverFlow
-            imagesArr={ albumArt }
-            itemRatio="1:1"
-            background="#fff"/>
+
+          <Albums albums={ albumArt }/>
         </section>
 
         <section id="project-list" className="dark">
-          <div className="section-header" style={{ borderBottom: '2px solid #fff', color: '#fff' }}>
+          <div className="section-header">
             <h3>Projects</h3>
           </div>
           <ul className="project-list">{
@@ -140,14 +151,14 @@ class App extends Component {
         </section>
 
         <section id="videos">
-          <div className="section-header" style={{ borderBottom: '2px solid #222', color: '#222' }}>
+          <div className="section-header">
             <h3>Videos</h3>
           </div>
           <VideosList videos={ videos }/>
         </section>
 
-        <section id="studios" className="dark" style={{ paddingBottom: '100px' }}>
-          <div className="section-header" style={{ borderBottom: '2px solid #fff', color: '#fff' }}>
+        <section id="studios">
+          <div className="section-header">
             <h3>Favorite Studios</h3>
           </div>
           
@@ -165,11 +176,7 @@ class App extends Component {
           </div>
         </section>
 
-        <footer style={{
-          textAlign: 'center',
-          fontWeight: 'bold',
-          padding: '10px 0',
-          color: '#555' }}>Nathan Winter ©2018</footer>
+        <footer>Nathan Winter ©2018</footer>
       </div>
     );
   }

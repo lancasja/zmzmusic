@@ -1,28 +1,34 @@
-/* ================================
-  HEADER
-================================ */
-/* Top-Level */
+/* Global */
+img {
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 40px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
-.logo {
+.header .logo {
+  width: 30%;
   max-width: 200px;
+  margin: 0 auto 20px auto;
 }
 
-.logo img {
-  max-width: 100%;
-}
-
-/* Title */
 .site-title {
-  flex-grow: 1;
   text-align: center;
-  padding-right: 75px;
 }
 
 .site-title span {
@@ -34,120 +40,186 @@
   font-size: 18px;
 }
 
-/* Contact Links */
-.contact-link {
+.contact {
+  text-align: center;
+  margin-top: 30px;
   display: flex;
-  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contact-link {
   text-decoration: none;
-  color: #4B4B4B;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 10px;
+  color: #111;
 }
 
 .contact-link--icon {
-  background-repeat: no-repeat;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   display: inline-block;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: bottom;
   position: relative;
-  top: 3px;
-  margin-right: 10px;
+  top: 1px;
+  margin-right: 3px;
 }
 
-/* ================================
-  CONTENT BLOCKS
-================================ */
+/* Content Blocks */
 section {
-  padding: 40px 60px;
+  padding: 20px 20px;
 }
 
 .section-header {
-  width: 250px;
-  color: #fff;
-  margin-left: -60px;
-  margin-bottom: 40px;
+  display: inline-block;
+  border-bottom: 4px solid #111;
+  border-top: 4px solid #111;
+  margin-bottom: 20px;
 }
 
 .section-header h3 {
-  font-size: 24px;
-  margin: 0;
-  padding: 10px;
+  margin: 10px 0;
+  font-size: 20px;
 }
 
-.dark {
-  background: #111;
-  color: white;
-}
-/* ================================
-  PROJECT LIST
-================================ */
-section {
-  text-align: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+/* Albums */
+
+.album-art {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-left: -5px;
 }
 
+.album-art--album {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+  margin: 0 5px;
+}
+
+/* Projects */
 .project-list {
-  list-style: none;
-  padding: 0;
-  columns: 3;
+  columns: 2;
+  column-rule: 2px dotted rgba(151, 151, 151, 0.3);
+  column-gap: 50px;
+  border-left: 2px dotted rgba(151, 151, 151, 0.3);
+  padding-left: 20px;
+  max-width: 1000px;
 }
 
 .project-list li {
   padding: 5px 0;
 }
 
-@media (max-width: 768px) {
-  .project-list {
-    columns: 2;
-  }
-}
-
-@media (max-width: 540px) {
-  .project-list {
-    columns: 1;
-  }
-}
-
-/* ================================
-  VIDEOS
-================================ */
-.videos,
-.studios {
-  width: 100%;
-  min-height: 300px;
+/* Videos */
+.videos {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-.videos .video,
-.studios .studio {
-  width: 640px;
-  height: 360px;
-  margin-bottom: 20px;
-  display: block;
+.videos .video {
+  width: 100%;
+  max-width: 540px;
+  height: 220px;
+  flex-shrink: 0;
+  padding: 10px;
 }
 
-.videos .video iframe,
-.studios .studio img {
+.videos .video iframe {
   width: 100%;
   height: 100%;
 }
 
-@media (max-width: 1260px) {
+.studios .studio {
+  text-decoration: none;
+  color: #111;
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.studios .studio:hover {
+  opacity: 0.9;
+}
+
+footer {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0;
+  color: #555;
+  box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+}
+
+/* Desktop */
+@media (min-width: 520px) {
   .videos .video {
-    width: 480px;
-    height: 296px;
+    height: 320px;
   }
 }
 
-.studio {
-  color: #fff;
-  text-decoration: none;
-  font-size: 20px;
+@media (min-width: 640px) {
+  .header .logo {
+    margin: unset;
+  }
+
+  .header {
+    display: flex;
+  }
+
+  .header .site-title {
+    flex-grow: 1;
+    margin-left: -50px;
+  }
+
+  .contact {
+    flex-direction: column;
+    margin-top: unset;
+    justify-content: space-between;
+  }
+
+  .album-art--album {
+    width: 200px;
+    height: 200px;
+  }
+
+  .project-list {
+    columns: 3;
+  }
+
+  .videos .video {
+    height: 320px;
+  }
+
+  .studios {
+    display: flex;
+  }
+
+  .studios .studio {
+    width: 50%;
+    padding: 10px;
+  }
 }
 
-.studio img {
-  margin-bottom: 20px;
+@media (min-width: 768px) {
+  .album-art--album {
+    width: 250px;
+    height: 250px;
+  }
+
+  .project-list {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 920px) {
+  .project-list {
+    columns: 4;
+  }
+
+  .videos .video {
+    width: 50%;
+  }
 }
